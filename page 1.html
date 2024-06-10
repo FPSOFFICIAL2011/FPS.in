@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS song's text</title>
+    <link rel="stylesheet" type="text/css" href="page1.css">
+</head>
+<body>
+
+    <div id="link">
+        <a href="#" id="logo">Song's Text</a>
+        <a href="about.html" id="about">ABOUT US</a>
+        <a href="contact.html" id="contact">CONTACT US</a>
+        <a href="privacy.html" id="pp">LOGOUT</a>
+        <a href="homepage.html" id="home">HOME</a>
+        <input type="text" id="searchInput" placeholder="search JETFORMS">
+        <ul id="searchList">
+            <li>
+                <a href="#" id="follow">FREE SONGS</a>
+            </li>
+            <li>
+              <a href="#" id="follow">PREMIUM SONGS</a>
+          </li>
+          </ul>
+          <script>
+            document.getElementById('searchInput').addEventListener('keyup', function() {
+              let searchValue = this.value.toLowerCase();
+              let items = document.querySelectorAll('#searchList li');
+              items.forEach(function(item) {
+                let text = item.textContent.toLowerCase();
+                if(text.includes(searchValue)) {
+                  item.style.display = 'block';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+            });
+          </script>
+    </div>
+
+
+    <div id="bottom">
+        
+    </div>
+
+    <script src="index.js" prefer></script>
+
+</body>
+</html>
